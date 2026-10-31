@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'data/database_helper.dart';
 import 'data/models.dart';
+import 'ui/locations_screen.dart';
+import 'ui/statistics_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _screens = [
     const MainScreen(),
+    const LocationsScreen(),
+    const StatisticsScreen(),
     const SettingsScreen(),
   ];
 
@@ -55,8 +59,16 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Accueil',
           ),
           NavigationDestination(
+            icon: Icon(Icons.location_on),
+            label: 'Lieux',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.bar_chart),
+            label: 'Stats',
+          ),
+          NavigationDestination(
             icon: Icon(Icons.settings),
-            label: 'Paramètres',
+            label: 'Réglages',
           ),
         ],
       ),

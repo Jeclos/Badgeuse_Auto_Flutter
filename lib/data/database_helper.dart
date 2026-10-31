@@ -77,6 +77,11 @@ class DatabaseHelper {
     return result.map((map) => PresenceEntity.fromMap(map)).toList();
   }
 
+  Future<int> clearPresences() async {
+    final db = await instance.database;
+    return await db.delete('presence');
+  }
+
   // Work Locations methods
   Future<int> insertWorkLocation(WorkLocationEntity location) async {
     final db = await instance.database;
@@ -87,6 +92,11 @@ class DatabaseHelper {
     final db = await instance.database;
     final result = await db.query('work_locations');
     return result.map((map) => WorkLocationEntity.fromMap(map)).toList();
+  }
+
+  Future<int> deleteWorkLocation(int id) async {
+    final db = await instance.database;
+    return await db.delete('work_locations', where: 'id = ?', whereArgs: [id]);
   }
 
   // Settings methods

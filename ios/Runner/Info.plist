@@ -66,5 +66,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Cette application a besoin de votre position pour détecter votre présence sur votre lieu de travail.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Cette application a besoin de votre position en arrière-plan pour automatiser le pointage.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Cette application a besoin de votre position en arrière-plan pour automatiser le pointage.</string>
 </dict>
 </plist>
